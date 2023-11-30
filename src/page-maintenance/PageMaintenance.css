@@ -6,10 +6,19 @@ body {
 .pageMaintenance {
   width: 100vw;
   height: 100vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .title {
     z-index: 1;
@@ -72,7 +81,7 @@ body {
     right: 0;
   }
 
-  .container {
+  .wireAndBottle {
     position: absolute;
     top: 275px;
     left: 27px;
@@ -100,40 +109,25 @@ body {
   .ufo-light {
     display: block;
     position: absolute;
-    top: 245px;
+    top: 285px;
     z-index: 1;
     opacity: 0;
   }
 
-  .bottle-box {
-    position: absolute;
-    width: 290px;
-    height: 218px;
-    z-index: 0;
-    top: 300px;
-  }
-
   .bottle {
     position: absolute;
-    width: 290px;
-    height: 218px;
     z-index: 0;
     top: 300px;
+    left: -20px;
   }
 
   .bottle-half {
     position: absolute;
     top: 347px;
+    left: -20px;
     z-index: 2;
     object-fit: cover;
     object-position: bottom;
-  }
-
-  .label {
-    position: absolute;
-    top: 390px;
-    left: 16px;
-    z-index: 2;
   }
 }
 
