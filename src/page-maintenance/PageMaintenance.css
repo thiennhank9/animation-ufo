@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.pageMaintenance {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  .title {
+    font-family: Plus Jakarta Sans;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 76px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #31374a;
+    margin: 0;
+    padding-top: 100px;
+  }
+
+  .moon-left {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+  }
+
+  .moon-right {
+    position: absolute;
+    right: 30px;
+    top: 80px;
+  }
+
+  .ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .hoistingAndUfo {
+    position: absolute;
+    left: 300px;
+    width: 1000px;
+    height: 900px;
+  }
+
+  .hoisting-machine {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .container {
+    position: absolute;
+    top: 275px;
+    left: 27px;
+  }
+
+  .wireAndUfo {
+    position: relative;
+    width: 277px;
+  }
+
+  .wire {
+    display: block;
+    position: absolute;
+    left: 44px;
+    z-index: 1;
+  }
+
+  .ufo {
+    display: block;
+    position: absolute;
+    top: 55px;
+    z-index: 1;
+  }
+
+  .ufo-light {
+    display: block;
+    position: absolute;
+    top: 245px;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  .bottle-box {
+    position: absolute;
+    width: 290px;
+    height: 218px;
+    z-index: 0;
+    top: 300px;
+  }
+
+  .bottle {
+    position: absolute;
+    width: 290px;
+    height: 218px;
+    z-index: 0;
+    top: 300px;
+  }
+
+  .bottle-half {
+    position: absolute;
+    top: 347px;
+    z-index: 2;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}
