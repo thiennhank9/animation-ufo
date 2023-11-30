@@ -6,7 +6,6 @@ const duration = 7.5;
 export default function PageMaintenance() {
   return (
     <div className="pageMaintenance">
-      <h1 className="title">We are under...</h1>
       <img
         alt="moon-right"
         src={require("./assets/moon-right.png")}
@@ -22,6 +21,8 @@ export default function PageMaintenance() {
         className="moon-left"
       />
 
+      <h1 className="title">We are under...</h1>
+      <h2 className="status">Maintenance</h2>
       <img
         alt="ground"
         src={require("./assets/ground.png")}
@@ -146,12 +147,21 @@ export default function PageMaintenance() {
             height={218}
             className="bottle"
           />
+
           <img
             alt="bottle"
             src={require("./assets/bottle.png")}
             width={290}
             height={170}
             className="bottle-half"
+          />
+
+          <img
+            width={256}
+            height={58}
+            src={require("./assets/label.png")}
+            alt="label"
+            className="label"
           />
         </div>
       </div>
