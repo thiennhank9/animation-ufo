@@ -83,11 +83,13 @@ body {
 
   .wireAndBottle {
     position: absolute;
+    width: 320px;
     top: 275px;
     left: 27px;
   }
 
   .wireAndUfo {
+    width: 277px;
     position: relative;
     width: 277px;
   }
