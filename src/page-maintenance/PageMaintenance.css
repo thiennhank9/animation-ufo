@@ -48,13 +48,13 @@ body {
 
   .moon-left {
     position: absolute;
-    left: 30px;
+    left: 0;
     top: 50%;
   }
 
   .moon-right {
     position: absolute;
-    right: 30px;
+    right: 0;
     top: 80px;
   }
 
