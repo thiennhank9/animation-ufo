@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import "./Page404.css";
+import { useState } from "react";
 
 export default function Page404() {
+  const [ufo, setUfo] = useState("initial");
+
   return (
     <div className="page404">
       <div className="container">
@@ -22,37 +25,47 @@ export default function Page404() {
           src={require("./assets/0-ground-right.png")}
           width={212}
           height={212}
-          animate={{
-            opacity: [1, 1, 0, 0, 0],
-          }}
+          animate={
+            ["initial", "left"].includes(ufo)
+              ? {
+                  opacity: [0, 1],
+                }
+              : {
+                  opacity: [1, 0],
+                }
+          }
           transition={{
-            duration: 2.6,
-            times: [0, 0.3, 0.5, 0.8, 1],
+            duration: 0.3,
+            times: [0, 1],
             ease: "linear",
-            repeat: Infinity,
-            repeatDelay: 0,
           }}
         />
         <div className="ground">
           <img alt="ground" src={require("./assets/ground.png")} width={1440} />
         </div>
-        <motion.img
-          className="zero-top-left"
-          alt="0-top-left"
-          src={require("./assets/0-top-left.png")}
-          width={120}
-          height={120}
-          animate={{
-            opacity: [0, 0, 1, 1, 0],
-          }}
-          transition={{
-            duration: 2.6,
-            times: [0, 0.3, 0.5, 0.8, 1],
-            ease: "linear",
-            repeat: Infinity,
-            repeatDelay: 0,
-          }}
-        />
+        {ufo !== "initial" && (
+          <motion.img
+            className="zero-top-left"
+            alt="0-top-left"
+            src={require("./assets/0-top-left.png")}
+            width={120}
+            height={120}
+            animate={
+              ufo === "right"
+                ? {
+                    opacity: [0, 1],
+                  }
+                : {
+                    opacity: [1, 0],
+                  }
+            }
+            transition={{
+              duration: 0.3,
+              times: [0, 1],
+              ease: "linear",
+            }}
+          />
+        )}
         <img
           alt="moon-left"
           src={require("./assets/moon-left.png")}
@@ -67,42 +80,63 @@ export default function Page404() {
           height={100}
           className="moon-right"
         />
+
         <motion.img
           alt="ufo-left"
+          onHoverStart={() => setUfo("right")}
           className="ufo-left"
           src={require("./assets/ufo-left.png")}
           width={490}
           height={780}
-          animate={{
-            x: [0, 0, -500, -500, 0],
-            y: [0, 0, 700, 700, 0],
-            rotate: [-30, -30, -70, -70, -30],
-          }}
+          animate={
+            ["left", "initial"].includes(ufo)
+              ? {
+                  x: [-500, 0],
+                  y: [700, 0],
+                  rotate: [-70, -30],
+                }
+              : {
+                  x: [0, -500],
+                  y: [0, 700],
+                  rotate: [-30, -70],
+                }
+          }
           transition={{
-            duration: 2.6,
-            times: [0, 0.3, 0.5, 0.8, 1],
+            duration: 0.5,
+            times: [0, 1],
             ease: "easeInOut",
-            repeat: Infinity,
+            repeat: 0,
           }}
         />
-        <motion.img
-          alt="ufo-right"
-          className="ufo-right"
-          src={require("./assets/ufo-right.png")}
-          width={490}
-          height={780}
-          animate={{
-            x: [500, 500, 0, 0, 500],
-            y: [700, 700, 0, 0, 700],
-            rotate: [70, 70, 30, 30, 70],
-          }}
-          transition={{
-            duration: 2.6,
-            times: [0, 0.3, 0.5, 0.8, 1],
-            ease: "easeInOut",
-            repeat: Infinity,
-          }}
-        />
+
+        {ufo !== "initial" && (
+          <motion.img
+            alt="ufo-right"
+            className="ufo-right"
+            onHoverStart={() => setUfo("left")}
+            src={require("./assets/ufo-right.png")}
+            width={490}
+            height={780}
+            animate={
+              ufo === "right"
+                ? {
+                    x: [500, 0],
+                    y: [700, 0],
+                    rotate: [70, 30],
+                  }
+                : {
+                    x: [0, 500],
+                    y: [0, 700],
+                    rotate: [30, 70],
+                  }
+            }
+            transition={{
+              duration: 0.5,
+              times: [0, 1],
+              ease: "easeInOut",
+            }}
+          />
+        )}
       </div>
     </div>
   );
