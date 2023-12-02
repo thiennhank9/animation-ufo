@@ -75,7 +75,7 @@ export default function Page404() {
           height={780}
           animate={{
             x: [0, 0, -500, -500, 0],
-            y: [0, 0, 500, 500, 0],
+            y: [0, 0, 700, 700, 0],
             rotate: [-30, -30, -70, -70, -30],
           }}
           transition={{
@@ -93,7 +93,7 @@ export default function Page404() {
           height={780}
           animate={{
             x: [500, 500, 0, 0, 500],
-            y: [500, 500, 0, 0, 500],
+            y: [700, 700, 0, 0, 700],
             rotate: [70, 70, 30, 30, 70],
           }}
           transition={{

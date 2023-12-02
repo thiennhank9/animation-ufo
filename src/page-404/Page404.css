@@ -84,7 +84,7 @@ body {
 
   .ufo-left {
     position: absolute;
-    top: 220px;
+    bottom: 0px;
   }
 
   .ufo-right {
