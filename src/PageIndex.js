@@ -1,13 +1,5 @@
 import { Link } from "react-router-dom";
-
-const routes = [
-  {
-    path: "/404",
-  },
-  {
-    path: "/maintenance",
-  },
-];
+import route from "./route";
 
 export default function PageIndex() {
   return (
@@ -15,7 +7,7 @@ export default function PageIndex() {
       <header>
         <nav>
           <ul>
-            {routes.map(({ path }) => (
+            {route.map(({ path }) => (
               <li key={path}>
                 <Link to={path}>{path}</Link>
               </li>

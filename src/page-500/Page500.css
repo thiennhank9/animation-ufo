@@ -1,0 +1,124 @@
+.page500 {
+  width: 100vw;
+  height: 100vh;
+
+  .container {
+    margin: auto;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .server-error {
+    font-family: Plus Jakarta Sans;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 63px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+    margin-top: 46px;
+    margin-left: 176px;
+  }
+
+  .text-500 {
+    margin-left: 40px;
+  }
+
+  .moon-top {
+    position: absolute;
+    left: 60%;
+  }
+
+  .description {
+    color: #31374a;
+    font-family: Plus Jakarta Sans;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 1;
+    padding: 0 50px;
+  }
+
+  .ground {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .boxUfoAndFire {
+    position: absolute;
+    width: 548px;
+    height: 812px;
+    bottom: 140px;
+    right: 106px;
+
+    .smoke {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .ufo {
+      position: absolute;
+      left: 22px;
+      bottom: 85px;
+    }
+
+    .rock-left {
+      position: absolute;
+      bottom: 136px;
+      left: 0;
+    }
+
+    .fire-1 {
+      position: absolute;
+      left: 110px;
+      bottom: 80px;
+    }
+
+    .fire-2 {
+      position: absolute;
+      left: 111px;
+      bottom: 84px;
+    }
+
+    .rock {
+      position: absolute;
+      left: 22px;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .page500 {
+    .boxUfoAndFire {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .page500 {
+    .server-error {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .text-500 {
+      width: 280px;
+      height: 189px;
+      margin: 0 auto;
+    }
+
+    .description {
+      font-size: 30px;
+    }
+  }
+}

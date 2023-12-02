@@ -1,24 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Page404 from "./page-404";
-import PageMaintenance from "./page-maintenance";
-import PageIndex from "./PageIndex";
+import route from "./route";
 
-const routes = [
-  {
-    path: "/",
-    element: <PageIndex />,
-  },
-  {
-    path: "/404",
-    element: <Page404 />,
-  },
-  {
-    path: "/maintenance",
-    element: <PageMaintenance />,
-  },
-];
-
-const router = createBrowserRouter(routes);
+const router = createBrowserRouter(route);
 
 function App() {
   return <RouterProvider router={router} />;
